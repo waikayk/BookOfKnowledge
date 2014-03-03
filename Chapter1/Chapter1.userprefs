@@ -1,10 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Packages\Marmoset\Documentation\HDR.txt">
     <Files>
-      <File FileName="Assets\Scripts\ObliqueCamera.cs" Line="10" Column="54" />
-      <File FileName="Assets\Scripts\CameraController.cs" Line="95" Column="25" />
-      <File FileName="Assets\Scripts\GameController.cs" Line="9" Column="3" />
+      <File FileName="Assets\Packages\Marmoset\Documentation\HDR.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
