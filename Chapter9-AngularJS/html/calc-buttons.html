@@ -1,30 +1,32 @@
 <div class="center">
-	<div id="display">{{calc.Answer}}</div>
+	<div id="display">{{calc.displayThis | number}}</div>
+	<div id="operation">Operation: {{calc.mathAction}}</div>
+	
 	<div>
-		<input type="button" value="7" id="btnStandard" ng-click="calc.Parrot(7)">
-		<input type="button" value="8" id="btnStandard" ng-click="calc.Parrot(8)">
-		<input type="button" value="9" id="btnStandard" ng-click="calc.Parrot(9)">
-		<input type="button" value="*" id="btnStandard" ng-click="calc.Parrot('*')">
+		<input type="button" value="7" id="btnStandard" ng-click="calc.CreateNumber('7')">
+		<input type="button" value="8" id="btnStandard" ng-click="calc.CreateNumber(8)">
+		<input type="button" value="9" id="btnStandard" ng-click="calc.CreateNumber(9)">
+		<input type="button" value="*" id="btnStandard" ng-click="calc.SetMathAction('*')">
 	</div>
 	<div>
-		<input type="button" value="4" id="btnStandard" ng-click="calc.Parrot(4)">
-		<input type="button" value="5" id="btnStandard" ng-click="calc.Parrot(5)">
-		<input type="button" value="6" id="btnStandard" ng-click="calc.Parrot(6)">
-		<input type="button" value="/" id="btnStandard" ng-click="calc.Parrot('/ ')">
-		<input type="button" value="c" id="btnVert" ng-click="calc.Parrot('0')">
+		<input type="button" value="4" id="btnStandard" ng-click="calc.CreateNumber(4)">
+		<input type="button" value="5" id="btnStandard" ng-click="calc.CreateNumber(5)">
+		<input type="button" value="6" id="btnStandard" ng-click="calc.CreateNumber(6)">
+		<input type="button" value="/" id="btnStandard" ng-click="calc.SetMathAction('/')">
+		<input type="button" value="c" id="btnVert" ng-click="calc.Clear()">
 	</div>
 	<div>
-		<input type="button" value="1" id="btnStandard" ng-click="calc.Parrot(1)">
-		<input type="button" value="2" id="btnStandard" ng-click="calc.Parrot(2)">
-		<input type="button" value="3" id="btnStandard" ng-click="calc.Parrot(3)">
-		<input type="button" value="+" id="btnStandard" ng-click="calc.Parrot('+')">
+		<input type="button" value="1" id="btnStandard" ng-click="calc.CreateNumber(1)">
+		<input type="button" value="2" id="btnStandard" ng-click="calc.CreateNumber(2)">
+		<input type="button" value="3" id="btnStandard" ng-click="calc.CreateNumber(3)">
+		<input type="button" value="+" id="btnStandard" ng-click="calc.SetMathAction('+')">
 
 	</div>
 	<div>
-		<input type="button" value="0" id="btn0" ng-click="calc.Parrot(0)">
-		<input type="button" value="." id="btnStandard" ng-click="calc.Parrot('.')">
-		<input type="button" value="-" id="btnStandard" ng-click="calc.Parrot('-')">
-		<input type="button" value="=" id="btnVert" ng-click="calc.Parrot('=')">
+		<input type="button" value="0" id="btn0" ng-click="calc.CreateNumber(0)">
+		<input type="button" value="." id="btnStandard" ng-click="calc.CreateNumber('.')">
+		<input type="button" value="-" id="btnStandard" ng-click="calc.SetMathAction('-')">
+		<input type="button" value="=" id="btnVert" ng-click="calc.ProcessEquals()">
 	</div>
 
 </div>
