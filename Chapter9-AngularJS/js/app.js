@@ -5,6 +5,8 @@ app.controller('CalcController', function(){
 	this.currentTotal = "0";
 	this.displayThis = "0";
 	this.mathAction = "";
+	this.previousMathAction = "";
+	this.previousNumber = "";
 	
 	this.CreateNumber = function(digit){
 		this.currentNumber += digit;
@@ -13,18 +15,25 @@ app.controller('CalcController', function(){
 	
 	this.SetMathAction = function(symbol){
 		if(this.mathAction !== ""){
-			this.ProcessEquals();
+			this.Process();
 		}
-		else{
-			if(this.currentNumber !== ""){
-				this.currentTotal = this.currentNumber;
-			}
+		else if(this.currentNumber !== ""){
+			this.currentTotal = this.currentNumber;
 		}
+		
 		this.currentNumber = "";
 		this.mathAction = symbol;
 	};
 	
-	this.ProcessEquals = function(){
+	this.Equals = function(){
+		if(this.currentNumber === ""){
+			this.mathAction = this.previousMathAction;
+			this.currentNumber = this.previousNumber;
+		}
+		this.Process();
+	}
+	
+	this.Process = function(){
 		if(this.mathAction === "" || this.currentNumber === "") return;
 		
 		if(this.mathAction === '+'){
@@ -39,11 +48,16 @@ app.controller('CalcController', function(){
 		else if(this.mathAction === '/'){
 			this.currentTotal = parseFloat(this.currentTotal) / parseFloat(this.currentNumber);
 		}
-
+		
+		this.previousMathAction = this.mathAction;
+		this.mathAction = "";
+		this.previousNumber = this.currentNumber;
+		this.currentNumber = "";
+		
 		this.displayThis = this.currentTotal;
 	};
 	
-	this.Clear = function(){
+	this.ClearAll = function(){
 		this.currentTotal = "0";
 		this.currentNumber = "";
 		this.displayThis = "0";

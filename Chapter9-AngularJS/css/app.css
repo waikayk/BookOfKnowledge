@@ -17,6 +17,7 @@
 	margin-right: 5px;
 	margin-top: 5px;
 	width: 70px;
+	color: blue;
 }
 
 #btnStandard{
@@ -25,16 +26,18 @@
 	margin-top: 5px;
 	width: 30px;
 	font-size: 28px;
+	color: blue;
 }
 
 #btnVert{
 	font-family: "Arial";
 	margin-right: 10px;
 	margin-top: -40px;
-	height: 85px;
+	height: 83px;
 	font-size: 28px;
 	float: right;
 	width: 30px;
+	color: green;
 }
 
 body{
